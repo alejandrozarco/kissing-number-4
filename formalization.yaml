@@ -1,0 +1,144 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+# formalization.yaml (v0.4): repo-root metadata for formalization projects.
+
+version: "v0.4"
+
+project:
+  name: "kissing-number-4: the kissing number in dimension 4"
+  description: >-
+    An AI-produced warrant, meaning a machine-checked Lean proof that no human has digested, of the theorem that the
+    kissing number of R^4 is 24 (Musin 2008). Lower bound: the 24 vertices of the 24-cell with integer coordinates.
+    Upper bound: an exact Bachoc-Vallentin three-point semidefinite certificate (total degree 14) for 25 unit vectors
+    with pairwise inner products at most 1/2, checked by `decide +kernel`, with a Lean proof of three-point positivity
+    on S^3 for degrees up to 7. The repository also contains the certificate as JSON with an independent exact checker
+    in Python.
+  authors:
+    - "alejandrozarco (repository owner; directed the work)"
+    - "Claude Opus 5.5 (Anthropic), AI model that produced the certificate and Lean code"
+    - "Claude Sonnet 5.5 (Anthropic), AI model used as a sub-agent for parts of the Lean code (AI_DISCLOSURE.md)"
+  responsible_maintainers:
+    - "alejandrozarco"
+  license: "Apache-2.0 (LICENSE); not covering the regenerated upstream code or the upstream material in adapted declarations (README, Licence)"
+
+sources:
+  - title: "The kissing number in four dimensions"
+    authors: ["O. R. Musin"]
+    id: "Ann. of Math. 168 (2008), 1-32"
+    type: "article"
+    relationship: "other"
+    note: "Source of the theorem. Its proof is not the one formalised here."
+    author_endorsement: "not-contacted"
+  - title: "New upper bounds for kissing numbers from semidefinite programming"
+    authors: ["C. Bachoc", "F. Vallentin"]
+    id: "J. Amer. Math. Soc. 21 (2008), 909-924"
+    type: "article"
+    relationship: "background"
+    note: "The three-point method. Its positivity theorem is formalised here for S^3 and degrees up to 7."
+    author_endorsement: "not-contacted"
+  - title: "Fixed-n three-point certificate for 25 points in dimension 4 (this repository)"
+    type: "original-proof"
+    relationship: "formalizes"
+    note: "AI-produced; numerics/kissing4/ and lean/Kissing4/. Not refereed."
+    author_endorsement: "n/a"
+
+related_formalizations:
+  - id: "https://github.com/huwngtran/thomson-n7-lean"
+    revision: "25f2fa53119273458cfbb3c4230904bffdd61e53"
+    relationship: "builds-on"
+    note: >-
+      Three-point machinery. Unchanged declarations are regenerated from it by lean/regen.sh and are not stored here.
+      Adapted declarations are stored with per-declaration attribution.
+  - id: "https://github.com/alejandrozarco/kissing-number-3"
+    relationship: "builds-on"
+    note: "The dimension-3 development (lean/Kissing/), whose certificate format and checker are reused."
+  - id: "https://github.com/alejandrozarco/thomson-n7-log"
+    relationship: "builds-on"
+    note: "Splitter, upstream-text scanner, certificate emitter utilities and the polynomial toolkit."
+
+classification:
+  arxiv: ["math.MG", "math.OC"]
+  msc2020: ["52C17", "05B40", "90C22", "03B35"]
+
+status:
+  scope: "kappa(4) = 24, with arrangements of any cardinality (sizes in ENat)."
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  main_results:
+    - declaration: "Kissing4.kissingNumber_four"
+      file: "lean/Kissing4/Solution.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "lean/comparator4.json"
+      literature_dependencies: []
+    - declaration: "Kissing4.encard_le_twentyFour_of_isKissing"
+      file: "lean/Kissing4/Solution.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "lean/comparator4.json"
+      literature_dependencies: []
+    - declaration: "Kissing4.exists_isKissing_encard_eq_twentyFour"
+      file: "lean/Kissing4/Solution.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "lean/comparator4.json"
+      literature_dependencies: []
+  notes: >-
+    Statement file: lean/Kissing4/Statement.lean (sorry by design). The package also contains the dimension-3
+    development (lean/Kissing/, statement lean/Kissing/Statement.lean, comparator lean/comparator.json). Comparator,
+    axioms and a clean build of a fresh copy of the package are recorded in verification/. No `native_decide`.
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["claude-opus-5-5", "claude-sonnet-5-5"]
+      framework: "Claude Code"
+      tool_setup: >-
+        Claude Opus 5.5 with terminal access, directing Claude Sonnet 5.5 sub-agents for parts of the Lean code.
+        Python (cvxpy/Clarabel, numpy, python-flint, sympy) for SDP solving, exact rounding, checking and generating
+        the addition identities. Lean 4 v4.34.1 + Mathlib, modules built one at a time on a Linux workstation.
+      cost:
+        wall_time: "about 2 days (2026-10-06 to 2026-10-07)"
+        spend_usd: "subscription-based usage"
+        hardware: "Apple-silicon laptop for the SDP; Linux workstation (6 cores, 19 GB RAM) for Lean builds"
+      prompting_notes: >-
+        The owner set the goal, approved the statement file and decided on scope and publication. Plans and results
+        are recorded in a development journal (not public).
+    - method: "agent"
+      models: ["gpt-6-astra"]
+      framework: "Codex CLI"
+      tool_setup: "A separate read-only reviewer instance without the working context."
+      prompting_notes: "Adversarial review of statement fidelity, the positivity proof, the checker and the numerics; see AI_DISCLOSURE.md."
+  spend_usd: "subscription-based usage (not separately metered)"
+  notes: "See AI_DISCLOSURE.md."
+
+fidelity:
+  divergences: >-
+    - The upper bound is formalised with a three-point certificate, not with Musin's argument.
+    - Three-point positivity on S^3 is proved for the degrees used (up to 7), not in general.
+
+review:
+  status: "agent-reviewed"
+  reviewers:
+    - "gpt-6-astra (read-only reviewer instance)"
+  notes: "No human expert has checked the formalisation. Comments and checks are welcome via GitHub issues."
+
+alignment:
+  namespace: "Kissing4"
+  statements:
+    - source: "kappa(4) = 24 (Musin 2008)"
+      lean: "Kissing4.kissingNumber_four"
+      module: "lean/Kissing4/Solution.lean (statement: lean/Kissing4/Statement.lean)"
+      status: "proved"
+    - source: "every kissing arrangement in R^4 has at most 24 balls"
+      lean: "Kissing4.encard_le_twentyFour_of_isKissing"
+      module: "lean/Kissing4/Solution.lean (statement: lean/Kissing4/Statement.lean)"
+      status: "proved"
+    - source: "24 balls can touch a central ball in R^4"
+      lean: "Kissing4.exists_isKissing_encard_eq_twentyFour"
+      module: "lean/Kissing4/Solution.lean (statement: lean/Kissing4/Statement.lean)"
+      status: "proved"
+
+acknowledgements: >-
+  Built on huwngtran/thomson-n7-lean (three-point machinery) and on kissing-number-3. Uses Mathlib, Lean 4, and
+  Python numerical libraries.

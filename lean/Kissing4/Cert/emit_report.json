@@ -1,0 +1,218 @@
+{
+ "cert": "cert_D14.json",
+ "sha256": "7981aa28cd8b196d1a7a7b7240abb43ddbad419935441bf92e46a3c3f88ea7d4",
+ "Lam_bits": 66,
+ "L0": 2254857830400,
+ "s": 24,
+ "pack": {
+  "F0": {
+   "eps_shift": "108228346919174",
+   "dd_slack": "107861826207744"
+  },
+  "F1": {
+   "eps_shift": "108356949753743",
+   "dd_slack": "105863121344176"
+  },
+  "F2": {
+   "eps_shift": "54149225168829",
+   "dd_slack": "53846936649728"
+  },
+  "F3": {
+   "eps_shift": "18072300126370",
+   "dd_slack": "17704427687014"
+  },
+  "F4": {
+   "eps_shift": "4511122009880",
+   "dd_slack": "4483393781760"
+  },
+  "F5": {
+   "eps_shift": "901633065505",
+   "dd_slack": "901349831828"
+  },
+  "F6": {
+   "eps_shift": "150323855360",
+   "dd_slack": "163208757248"
+  },
+  "F7": {
+   "eps_shift": "21474836480",
+   "dd_slack": "25769803776"
+  },
+  "S0": {
+   "eps_shift": "68714137768579",
+   "dd_slack": "29014974699843"
+  },
+  "S1": {
+   "eps_shift": "108092936014471",
+   "dd_slack": "96350850870339"
+  },
+  "S2": {
+   "eps_shift": "54044979633076",
+   "dd_slack": "28187964844060"
+  },
+  "S3": {
+   "eps_shift": "54078608665935",
+   "dd_slack": "27825784343417"
+  },
+  "S4": {
+   "eps_shift": "108087737246425",
+   "dd_slack": "94345083760586"
+  },
+  "S5": {
+   "eps_shift": "54051879728709",
+   "dd_slack": "32074670913403"
+  },
+  "S6": {
+   "eps_shift": "54070549703615",
+   "dd_slack": "33381513307545"
+  },
+  "S7": {
+   "eps_shift": "108098357195391",
+   "dd_slack": "91532671933438"
+  },
+  "S8": {
+   "eps_shift": "54067183104619",
+   "dd_slack": "32046101394209"
+  },
+  "S9": {
+   "eps_shift": "54075497288629",
+   "dd_slack": "22896131305542"
+  },
+  "S10": {
+   "eps_shift": "108154283289744",
+   "dd_slack": "94336694034557"
+  }
+ },
+ "w": 95,
+ "D": 15,
+ "total": [
+  "24375704014575705763529388000",
+  "14",
+  "14",
+  "14",
+  "0"
+ ],
+ "groups": [
+  "ChkF0",
+  "ChkF1",
+  "ChkF2",
+  "ChkF3",
+  "ChkF4",
+  "ChkF5",
+  "ChkF6",
+  "ChkF7",
+  "ChkS0_0",
+  "ChkS0_1",
+  "ChkS0_2",
+  "ChkS0_3",
+  "ChkS0_4",
+  "ChkS0_5",
+  "ChkS0_6",
+  "ChkS0_7",
+  "ChkS0_8",
+  "ChkS0_9",
+  "ChkS0_10",
+  "ChkS0_11",
+  "ChkS0",
+  "ChkS1_0",
+  "ChkS1_1",
+  "ChkS1_2",
+  "ChkS1_3",
+  "ChkS1_4",
+  "ChkS1_5",
+  "ChkS1_6",
+  "ChkS1_7",
+  "ChkS1_8",
+  "ChkS1",
+  "ChkS2_0",
+  "ChkS2_1",
+  "ChkS2_2",
+  "ChkS2_3",
+  "ChkS2_4",
+  "ChkS2_5",
+  "ChkS2_6",
+  "ChkS2_7",
+  "ChkS2_8",
+  "ChkS2",
+  "ChkS3_0",
+  "ChkS3_1",
+  "ChkS3_2",
+  "ChkS3_3",
+  "ChkS3_4",
+  "ChkS3_5",
+  "ChkS3_6",
+  "ChkS3_7",
+  "ChkS3_8",
+  "ChkS3",
+  "ChkS4_0",
+  "ChkS4_1",
+  "ChkS4_2",
+  "ChkS4_3",
+  "ChkS4_4",
+  "ChkS4_5",
+  "ChkS4_6",
+  "ChkS4_7",
+  "ChkS4_8",
+  "ChkS4",
+  "ChkS5_0",
+  "ChkS5_1",
+  "ChkS5_2",
+  "ChkS5_3",
+  "ChkS5_4",
+  "ChkS5_5",
+  "ChkS5_6",
+  "ChkS5_7",
+  "ChkS5_8",
+  "ChkS5",
+  "ChkS6_0",
+  "ChkS6_1",
+  "ChkS6_2",
+  "ChkS6_3",
+  "ChkS6_4",
+  "ChkS6_5",
+  "ChkS6_6",
+  "ChkS6_7",
+  "ChkS6_8",
+  "ChkS6",
+  "ChkS7_0",
+  "ChkS7_1",
+  "ChkS7_2",
+  "ChkS7_3",
+  "ChkS7_4",
+  "ChkS7_5",
+  "ChkS7_6",
+  "ChkS7_7",
+  "ChkS7_8",
+  "ChkS7",
+  "ChkS8_0",
+  "ChkS8_1",
+  "ChkS8_2",
+  "ChkS8_3",
+  "ChkS8_4",
+  "ChkS8_5",
+  "ChkS8_6",
+  "ChkS8_7",
+  "ChkS8_8",
+  "ChkS8",
+  "ChkS9_0",
+  "ChkS9_1",
+  "ChkS9_2",
+  "ChkS9_3",
+  "ChkS9_4",
+  "ChkS9_5",
+  "ChkS9_6",
+  "ChkS9_7",
+  "ChkS9_8",
+  "ChkS9",
+  "ChkS10_0",
+  "ChkS10_1",
+  "ChkS10_2",
+  "ChkS10_3",
+  "ChkS10_4",
+  "ChkS10_5",
+  "ChkS10",
+  "ChkId",
+  "OkF",
+  "Check"
+ ],
+ "chunk_rows": 10
+}

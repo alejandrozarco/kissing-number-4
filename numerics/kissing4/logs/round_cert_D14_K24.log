@@ -1,0 +1,19 @@
+[   0.0s] sol/fixn_D14_n25_mu0.5.npz: D=14 n=25 mu=5.72e-06 float e=0.0819308 -> exact e=1/32, KBITS=24
+[   0.1s] exact target P: 325 monomials, degree 14
+[   0.5s] rounding residual: 619 monomials, max |non-constant coef| 3.77e-05; constant 0.000169585 (expected about the dropped e/C(n,2) = 0.000168936)
+[   0.5s] WARNING: residual not small against mu; positive definiteness may fail
+[   0.8s] identity P == sum_r g_r z^T B_r z holds exactly
+[   0.8s]                     F0: size   8, positive definite, min pivot 7.47e-06
+[   0.8s]                     F1: size   7, positive definite, min pivot 1.1e-05
+[   0.8s]                     F2: size   6, positive definite, min pivot 7.81e-06
+[   0.8s]                     F3: size   5, positive definite, min pivot 7.39e-06
+[   0.8s]                     F4: size   4, positive definite, min pivot 6.46e-06
+[   0.8s]                     F5: size   3, positive definite, min pivot 1.73e-05
+[   0.8s]                     F6: size   2, positive definite, min pivot 5.72e-06
+[   0.8s]                     F7: size   1, positive definite, min pivot 5.72e-06
+Traceback (most recent call last):
+  File "numerics/kissing4/round_k4.py", line 26, in <module>
+    R.main(a[1], out, int(a[3]) if len(a) > 3 else 24, Fr(a[4]) if len(a) > 4 else Fr(1, 32))
+  File "numerics/kissing3/round_k3.py", line 248, in main
+    assert ok, f"{nmb} not positive definite (pivot {mp})"
+AssertionError: B0:1 not positive definite (pivot 84)

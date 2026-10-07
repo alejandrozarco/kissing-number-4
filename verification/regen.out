@@ -1,0 +1,10 @@
+59 modules, 2823 live / 212 dead declarations, 2470 lines removed
+ThomsonGen/Case1Stat.lean: OK
+ThomsonGen/Cert1.lean: OK
+ThomsonGen/Cert3.lean: OK
+ThomsonGen/CertF.lean: OK
+ThomsonGen/Kron.lean: OK
+ThomsonGen/M2.lean: OK
+ThomsonGen/Preamble.lean: OK
+ThomsonGen/ThreePoint.lean: OK
+regen OK

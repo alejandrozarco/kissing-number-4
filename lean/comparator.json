@@ -1,0 +1,17 @@
+{
+  "challenge_module": "Kissing.Statement",
+  "solution_module": "Kissing.Solution",
+  "theorem_names": [
+    "Kissing.exists_isKissing_encard_eq_twelve",
+    "Kissing.encard_le_twelve_of_isKissing",
+    "Kissing.kissingNumber_three",
+    "Kissing.isKissing_antipodal",
+    "Kissing.not_isKissing_close",
+    "Kissing.not_isKissing_far"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}

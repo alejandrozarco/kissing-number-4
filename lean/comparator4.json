@@ -1,0 +1,17 @@
+{
+  "challenge_module": "Kissing4.Statement",
+  "solution_module": "Kissing4.Solution",
+  "theorem_names": [
+    "Kissing4.exists_isKissing_encard_eq_twentyFour",
+    "Kissing4.encard_le_twentyFour_of_isKissing",
+    "Kissing4.kissingNumber_four",
+    "Kissing4.isKissing_antipodal",
+    "Kissing4.not_isKissing_close",
+    "Kissing4.not_isKissing_far"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}

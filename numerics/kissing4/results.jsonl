@@ -1,0 +1,10 @@
+{"tag": "bv_D10_L10_lp", "mode": "bv", "D": 10, "D2": 10, "three_point": false, "status": "optimal", "bound": 25.558429217782297, "time": 0.0, "sizes": []}
+{"tag": "bv_D16_L16_lp", "mode": "bv", "D": 16, "D2": 16, "three_point": false, "status": "optimal", "bound": 25.558429107760514, "time": 0.0, "sizes": []}
+{"tag": "bv_D8_L8", "mode": "bv", "D": 8, "D2": 8, "three_point": true, "status": "optimal_inaccurate", "bound": 25.99996155886383, "time": 0.9, "sizes": [5, 4, 3, 2, 1]}
+{"tag": "bv_D10_L10", "mode": "bv", "D": 10, "D2": 10, "three_point": true, "status": "optimal_inaccurate", "bound": 25.55719862595501, "time": 27.3, "sizes": [6, 5, 4, 3, 2, 1]}
+{"tag": "fixn_D8_n25", "mode": "fixn", "D": 8, "n": 25.0, "delsarte": null, "status": "optimal", "e": -0.3932819778057074, "e_over_C": -0.0013109399260190246, "time": 2.1, "sizes": [5, 4, 3, 2, 1]}
+{"tag": "fixn_D10_n25", "mode": "fixn", "D": 10, "n": 25.0, "delsarte": null, "status": "optimal_inaccurate", "e": -0.05252979340843739, "e_over_C": -0.00017509931136145798, "time": 13.5, "sizes": [6, 5, 4, 3, 2, 1]}
+{"tag": "bv_D12_L12", "mode": "bv", "D": 12, "D2": 12, "three_point": true, "status": "optimal_inaccurate", "bound": 25.156918684525063, "time": 215.8, "sizes": [7, 6, 5, 4, 3, 2, 1]}
+{"tag": "fixn_D12_n25", "mode": "fixn", "D": 12, "n": 25.0, "delsarte": null, "status": "optimal_inaccurate", "e": 0.005588334651149011, "e_over_C": 1.8627782170496703e-05, "time": 190.4, "sizes": [7, 6, 5, 4, 3, 2, 1]}
+{"tag": "fixn_D14_n25", "mode": "fixn", "D": 14, "n": 25.0, "delsarte": null, "status": "optimal_inaccurate", "e": 0.16386152871727325, "e_over_C": 0.0005462050957242442, "time": 4741.0, "sizes": [8, 7, 6, 5, 4, 3, 2, 1]}
+{"tag": "fixn_D14_n25_mu0.5", "mode": "mu", "D": 14, "n": 25.0, "delsarte": null, "frac": 0.5, "e": 0.08193076435863662, "status": "optimal", "mu": 5.721156023931278e-06, "mineig": 5.72110959212001e-06, "time": 5860.3, "blocks": {"F0": 8, "F1": 7, "F2": 6, "F3": 5, "F4": 4, "F5": 3, "F6": 2, "F7": 1, "T_B0": 120, "T_B1": 84, "T_B2": 84, "T_B3": 84, "T_B4": 84, "T_B5": 84, "T_B6": 84, "T_B7": 84, "T_B8": 84, "T_B9": 84, "T_B10": 56}}

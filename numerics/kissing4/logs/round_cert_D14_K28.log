@@ -1,0 +1,25 @@
+[   0.0s] sol/fixn_D14_n25_mu0.5.npz: D=14 n=25 mu=5.72e-06 float e=0.0819308 -> exact e=1/32, KBITS=28
+[   0.1s] exact target P: 325 monomials, degree 14
+[   0.5s] rounding residual: 622 monomials, max |non-constant coef| 2.69e-06; constant 0.000168921 (expected about the dropped e/C(n,2) = 0.000168936)
+[   0.5s] WARNING: residual not small against mu; positive definiteness may fail
+[   0.8s] identity P == sum_r g_r z^T B_r z holds exactly
+[   0.8s]                     F0: size   8, positive definite, min pivot 7.48e-06
+[   0.8s]                     F1: size   7, positive definite, min pivot 1.09e-05
+[   0.8s]                     F2: size   6, positive definite, min pivot 7.83e-06
+[   0.8s]                     F3: size   5, positive definite, min pivot 7.41e-06
+[   0.8s]                     F4: size   4, positive definite, min pivot 6.46e-06
+[   0.8s]                     F5: size   3, positive definite, min pivot 1.74e-05
+[   0.8s]                     F6: size   2, positive definite, min pivot 5.72e-06
+[   0.8s]                     F7: size   1, positive definite, min pivot 5.72e-06
+[  25.7s]                   B0:1: size 120, positive definite, min pivot 8.97e-06
+[  28.7s]                 B1:1+u: size  84, positive definite, min pivot 8.82e-06
+[  32.4s]               B2:1/2-u: size  84, positive definite, min pivot 8.08e-06
+[  36.4s]        B3:(1+u)(1/2-u): size  84, positive definite, min pivot 1.02e-05
+[  39.5s]                 B4:1+v: size  84, positive definite, min pivot 8.04e-06
+[  43.5s]               B5:1/2-v: size  84, positive definite, min pivot 8.79e-06
+[  48.1s]        B6:(1+v)(1/2-v): size  84, positive definite, min pivot 9.04e-06
+[  51.6s]                 B7:1+t: size  84, positive definite, min pivot 8.04e-06
+[  56.3s]               B8:1/2-t: size  84, positive definite, min pivot 8.79e-06
+[  61.1s]        B9:(1+t)(1/2-t): size  84, positive definite, min pivot 9.04e-06
+[  61.8s]               B10:detG: size  56, positive definite, min pivot 7.61e-06
+[  62.0s] wrote cert_D14.json (1670 KiB); Lam = 2^? : 39 bits, max |entry|*Lam: 41 bits

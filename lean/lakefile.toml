@@ -1,0 +1,27 @@
+name = "kissing"
+defaultTargets = ["Kissing", "Kissing4"]
+
+# Mathlib is the only dependency (the revision of the Coulomb Thomson formalisation whose three-point code is reused);
+# lake-manifest.json records the resolved revisions of its own dependencies.
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "d13f23b723b8a846827a245b89c10fc7d3f11612"
+
+# Statement (challenge, with `sorry`), proof, axiom check, and the certificate modules.
+[[lean_lib]]
+name = "Kissing"
+roots = ["Kissing.Statement", "Kissing.Solution", "Kissing.Axioms"]
+globs = ["Kissing.+"]
+
+# Dimension 4: statement (challenge, with `sorry`), proof, axiom check, and the certificate modules.
+[[lean_lib]]
+name = "Kissing4"
+roots = ["Kissing4.Statement", "Kissing4.Solution", "Kissing4.Axioms"]
+globs = ["Kissing4.+"]
+
+# Modules regenerated from the Coulomb formalisation by ./regen.sh (not stored in this repository).
+[[lean_lib]]
+name = "ThomsonGen"
+globs = ["ThomsonGen.+"]

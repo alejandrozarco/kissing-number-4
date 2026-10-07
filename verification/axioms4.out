@@ -1,0 +1,6 @@
+'Kissing4.exists_isKissing_encard_eq_twentyFour' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Kissing4.encard_le_twentyFour_of_isKissing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Kissing4.kissingNumber_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Kissing4.isKissing_antipodal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Kissing4.not_isKissing_close' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Kissing4.not_isKissing_far' depends on axioms: [propext, Classical.choice, Quot.sound]
